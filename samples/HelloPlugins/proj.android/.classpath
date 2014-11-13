@@ -38,5 +38,7 @@
 	<classpathentry exported="true" kind="lib" path="plugin-x/plugins/facebook/android/libPluginFacebook.jar"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
+	<classpathentry exported="true" kind="lib" path="plugin-x/plugins/GameThrive/android/gamethrivesdk.jar"/>
+	<classpathentry exported="true" kind="lib" path="plugin-x/plugins/GameThrive/android/libGameThrive.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

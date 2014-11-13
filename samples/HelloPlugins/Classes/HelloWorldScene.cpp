@@ -8,6 +8,7 @@
 #include "TestSocialScene.h"
 #include "TestFacebookUserScene.h"
 #include "TestFacebookShare.h"
+#include "TestPushScene.h"
 
 USING_NS_CC;
 
@@ -22,6 +23,7 @@ std::string g_testCases[] = {
     "Test IAP Online",
     "Test User",
     "Test Social",
+    "Test Push"
 #endif
 };
 
@@ -117,6 +119,7 @@ void HelloWorld::menuCallback(Ref* pSender)
         newScene = TestSocial::scene();
         break;
     case 9:
+        newScene = TestPush::scene();
         break;
     default:
         break;

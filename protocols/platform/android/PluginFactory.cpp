@@ -30,6 +30,7 @@ THE SOFTWARE.
 #include "ProtocolShare.h"
 #include "ProtocolUser.h"
 #include "ProtocolSocial.h"
+#include "ProtocolPush.h"
 
 namespace cocos2d { namespace plugin {
 
@@ -40,6 +41,7 @@ enum {
 	kPluginShare,
 	kPluginUser,
 	kPluginSocial,
+	kPluginPush
 };
 
 #define ANDROID_PLUGIN_PACKAGE_PREFIX			"org/cocos2dx/plugin/"
@@ -139,6 +141,8 @@ PluginProtocol* PluginFactory::createPlugin(const char* name)
 		case kPluginSocial:
 		    pRet = new ProtocolSocial();
 		    break;
+		case kPluginPush:
+			pRet = new ProtocolPush();
 		default:
 			break;
 		}
