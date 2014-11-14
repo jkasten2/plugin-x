@@ -1,0 +1,268 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37ACAEF81A153FC400D18B60 /* GameThrivePush.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 37ACAEF71A153FC400D18B60 /* GameThrivePush.h */; };
+		37ACAEFA1A153FC400D18B60 /* GameThrivePush.m in Sources */ = {isa = PBXBuildFile; fileRef = 37ACAEF91A153FC400D18B60 /* GameThrivePush.m */; };
+		37ACAF1A1A15814900D18B60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ACAF191A15814900D18B60 /* UIKit.framework */; };
+		37ACAF201A158DDB00D18B60 /* GameThrive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ACAF1F1A158DDB00D18B60 /* GameThrive.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		37ACAEF21A153FC400D18B60 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				37ACAEF81A153FC400D18B60 /* GameThrivePush.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		37ACAEF41A153FC400D18B60 /* libPluginGameThrivePush.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPluginGameThrivePush.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		37ACAEF71A153FC400D18B60 /* GameThrivePush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameThrivePush.h; sourceTree = "<group>"; };
+		37ACAEF91A153FC400D18B60 /* GameThrivePush.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameThrivePush.m; sourceTree = "<group>"; };
+		37ACAF191A15814900D18B60 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		37ACAF1F1A158DDB00D18B60 /* GameThrive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameThrive.framework; path = sdk/GameThrive.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37ACAEF11A153FC400D18B60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37ACAF201A158DDB00D18B60 /* GameThrive.framework in Frameworks */,
+				37ACAF1A1A15814900D18B60 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37ACAEEB1A153FC400D18B60 = {
+			isa = PBXGroup;
+			children = (
+				37ACAF1F1A158DDB00D18B60 /* GameThrive.framework */,
+				37ACAF191A15814900D18B60 /* UIKit.framework */,
+				37ACAEF61A153FC400D18B60 /* GameThrivePush */,
+				37ACAEF51A153FC400D18B60 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		37ACAEF51A153FC400D18B60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37ACAEF41A153FC400D18B60 /* libPluginGameThrivePush.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37ACAEF61A153FC400D18B60 /* GameThrivePush */ = {
+			isa = PBXGroup;
+			children = (
+				37ACAEF71A153FC400D18B60 /* GameThrivePush.h */,
+				37ACAEF91A153FC400D18B60 /* GameThrivePush.m */,
+			);
+			path = GameThrivePush;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37ACAEF31A153FC400D18B60 /* PluginGameThrivePush */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37ACAF081A153FC400D18B60 /* Build configuration list for PBXNativeTarget "PluginGameThrivePush" */;
+			buildPhases = (
+				37ACAEF01A153FC400D18B60 /* Sources */,
+				37ACAEF11A153FC400D18B60 /* Frameworks */,
+				37ACAEF21A153FC400D18B60 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PluginGameThrivePush;
+			productName = GameThrivePush;
+			productReference = 37ACAEF41A153FC400D18B60 /* libPluginGameThrivePush.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37ACAEEC1A153FC400D18B60 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = GameThrive;
+				TargetAttributes = {
+					37ACAEF31A153FC400D18B60 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 37ACAEEF1A153FC400D18B60 /* Build configuration list for PBXProject "PluginGameThrivePush" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 37ACAEEB1A153FC400D18B60;
+			productRefGroup = 37ACAEF51A153FC400D18B60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37ACAEF31A153FC400D18B60 /* PluginGameThrivePush */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37ACAEF01A153FC400D18B60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37ACAEFA1A153FC400D18B60 /* GameThrivePush.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		37ACAF061A153FC400D18B60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		37ACAF071A153FC400D18B60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37ACAF091A153FC400D18B60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/sdk",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../protocols/platform/ios";
+			};
+			name = Debug;
+		};
+		37ACAF0A1A153FC400D18B60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/sdk",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../protocols/platform/ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37ACAEEF1A153FC400D18B60 /* Build configuration list for PBXProject "PluginGameThrivePush" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37ACAF061A153FC400D18B60 /* Debug */,
+				37ACAF071A153FC400D18B60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37ACAF081A153FC400D18B60 /* Build configuration list for PBXNativeTarget "PluginGameThrivePush" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37ACAF091A153FC400D18B60 /* Debug */,
+				37ACAF0A1A153FC400D18B60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37ACAEEC1A153FC400D18B60 /* Project object */;
+}

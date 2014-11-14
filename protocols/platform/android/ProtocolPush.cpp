@@ -104,6 +104,10 @@ void ProtocolPush::init(const char* appId, const char* googleProjectNumber, Prot
         t.env->DeleteLocalRef(t.classID);
     }
 }
+    
+void ProtocolPush::registerForPushNotifications() {
+    // Does nothing for Android as we always auto register for push.
+}
 
 void ProtocolPush::sendTag(const char* key, const char* value) {
     PluginJavaData* pData = PluginUtils::getPluginJavaData(this);

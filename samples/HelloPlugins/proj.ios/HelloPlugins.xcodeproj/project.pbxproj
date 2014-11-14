@@ -20,10 +20,14 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		37ACAEE91A15393A00D18B60 /* MyPushManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37ACAEE51A15393A00D18B60 /* MyPushManager.cpp */; };
+		37ACAEEA1A15393A00D18B60 /* TestPushScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37ACAEE71A15393A00D18B60 /* TestPushScene.cpp */; };
+		37ACAF1D1A158D3800D18B60 /* libPluginGameThrivePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ACAF1C1A158D3800D18B60 /* libPluginGameThrivePush.a */; };
+		37ACAF221A158DFE00D18B60 /* GameThrive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ACAF211A158DFE00D18B60 /* GameThrive.framework */; };
+		37ACAF241A158ECE00D18B60 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ACAF231A158ECE00D18B60 /* FBAudienceNetwork.framework */; };
 		591A8D2419DF4DB700F71BFD /* libPluginFacebook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 591A8D2219DF4DB700F71BFD /* libPluginFacebook.a */; };
 		591A8D2519DF4DB700F71BFD /* libPluginFacebookAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 591A8D2319DF4DB700F71BFD /* libPluginFacebookAds.a */; };
 		592A55791964AD7D008E4BC7 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592A55781964AD7D008E4BC7 /* GameController.framework */; };
-		593E0BDD19BE206C00836D29 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593E0BDC19BE206C00836D29 /* FBAudienceNetwork.framework */; };
 		59EB3BE719649CFC0020118E /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA848852182B3AE400858BDD /* libcocos2d iOS.a */; };
 		59EB3BEA1964A7DD0020118E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59EB3BE91964A7DD0020118E /* Security.framework */; };
 		59EB3BEC1964A86D0020118E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59EB3BEB1964A86D0020118E /* CoreTelephony.framework */; };
@@ -119,10 +123,16 @@
 		1D6058910D05DD3D006BFB54 /* HelloPlugins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloPlugins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		37ACAEE51A15393A00D18B60 /* MyPushManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyPushManager.cpp; sourceTree = "<group>"; };
+		37ACAEE61A15393A00D18B60 /* MyPushManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPushManager.h; sourceTree = "<group>"; };
+		37ACAEE71A15393A00D18B60 /* TestPushScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestPushScene.cpp; sourceTree = "<group>"; };
+		37ACAEE81A15393A00D18B60 /* TestPushScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPushScene.h; sourceTree = "<group>"; };
+		37ACAF1C1A158D3800D18B60 /* libPluginGameThrivePush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPluginGameThrivePush.a; path = "../../../../../../Users/hiptic/Library/Developer/Xcode/DerivedData/plugin-x_ios-ghesvmhlqejqzueauxtbrhsuzcjp/Build/Products/Debug-iphoneos/libPluginGameThrivePush.a"; sourceTree = "<group>"; };
+		37ACAF211A158DFE00D18B60 /* GameThrive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameThrive.framework; path = ../../../plugins/GameThrive/proj.ios/sdk/GameThrive.framework; sourceTree = "<group>"; };
+		37ACAF231A158ECE00D18B60 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = ../../../plugins/facebookads/proj.ios/FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		591A8D2219DF4DB700F71BFD /* libPluginFacebook.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPluginFacebook.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		591A8D2319DF4DB700F71BFD /* libPluginFacebookAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPluginFacebookAds.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		592A55781964AD7D008E4BC7 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
-		593E0BDC19BE206C00836D29 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = ../../../plugins/facebookads/proj.ios/FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		59EB3BE91964A7DD0020118E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		59EB3BEB1964A86D0020118E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
@@ -191,6 +201,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37ACAF241A158ECE00D18B60 /* FBAudienceNetwork.framework in Frameworks */,
+				37ACAF221A158DFE00D18B60 /* GameThrive.framework in Frameworks */,
 				591A8D2419DF4DB700F71BFD /* libPluginFacebook.a in Frameworks */,
 				591A8D2519DF4DB700F71BFD /* libPluginFacebookAds.a in Frameworks */,
 				59EB3BE719649CFC0020118E /* libcocos2d iOS.a in Frameworks */,
@@ -199,7 +211,6 @@
 				D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */,
 				D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
-				593E0BDD19BE206C00836D29 /* FBAudienceNetwork.framework in Frameworks */,
 				FA848862182B3DEB00858BDD /* CoreMotion.framework in Frameworks */,
 				59EB3BEC1964A86D0020118E /* CoreTelephony.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
@@ -222,6 +233,7 @@
 				FAD554F8177C16A100968F54 /* libPluginWeibo.a in Frameworks */,
 				A964B98A19A1023500D96640 /* libsqlite3.dylib in Frameworks */,
 				BF1712461292920000B8313A /* libxml2.dylib in Frameworks */,
+				37ACAF1D1A158D3800D18B60 /* libPluginGameThrivePush.a in Frameworks */,
 				BF1712471292920000B8313A /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,6 +259,7 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				37ACAEE41A15393A00D18B60 /* TestPush */,
 				15CF33D319C0319E00D5614B /* TestFacebookShare */,
 				15CF33D619C0319E00D5614B /* TestFacebookUser */,
 				FADBF89D179E559900F59B1D /* TestSocial */,
@@ -311,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				A964B98919A1023500D96640 /* libsqlite3.dylib */,
+				37ACAF211A158DFE00D18B60 /* GameThrive.framework */,
 				A964B97D19A101BD00D96640 /* libPluginVungle.a */,
 				15CF33C919C029BF00D5614B /* FacebookSDK.framework */,
 				593E0BDC19BE206C00836D29 /* FBAudienceNetwork.framework */,
@@ -333,6 +347,7 @@
 				FAD554F2177C16A100968F54 /* libPluginWeibo.a */,
 				BF170DB212928DE900B8313A /* libxml2.dylib */,
 				BF170DB412928DE900B8313A /* libz.dylib */,
+				37ACAF1C1A158D3800D18B60 /* libPluginGameThrivePush.a */,
 				D44C620F132DFF4E0009C878 /* AudioToolbox.framework */,
 				D44C620D132DFF430009C878 /* AVFoundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
@@ -343,6 +358,18 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37ACAEE41A15393A00D18B60 /* TestPush */ = {
+			isa = PBXGroup;
+			children = (
+				37ACAEE51A15393A00D18B60 /* MyPushManager.cpp */,
+				37ACAEE61A15393A00D18B60 /* MyPushManager.h */,
+				37ACAEE71A15393A00D18B60 /* TestPushScene.cpp */,
+				37ACAEE81A15393A00D18B60 /* TestPushScene.h */,
+			);
+			name = TestPush;
+			path = ../Classes/TestPush;
 			sourceTree = "<group>";
 		};
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
@@ -566,10 +593,12 @@
 				1AFCDA8216D4A25900906EA6 /* RootViewController.mm in Sources */,
 				15CF33D919C0319E00D5614B /* TestFacebookShare.cpp in Sources */,
 				FAD554E5177C131500968F54 /* TestAdsScene.cpp in Sources */,
+				37ACAEE91A15393A00D18B60 /* MyPushManager.cpp in Sources */,
 				FAD554E6177C131500968F54 /* TestAnalyticsScene.cpp in Sources */,
 				FAD554E9177C131500968F54 /* MyShareManager.cpp in Sources */,
 				FAD554EA177C131500968F54 /* TestShareScene.cpp in Sources */,
 				FAD55518177D1EE900968F54 /* MyPurchase.cpp in Sources */,
+				37ACAEEA1A15393A00D18B60 /* TestPushScene.cpp in Sources */,
 				FAD55519177D1EE900968F54 /* TestIAPScene.cpp in Sources */,
 				FAD5551A177D1EE900968F54 /* MyUserManager.cpp in Sources */,
 				15CF33DA19C0319E00D5614B /* TestFacebookUserScene.cpp in Sources */,
@@ -604,6 +633,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../../plugins/facebookads/proj.ios\"",
 					"$(SRCROOT)/../../../plugins/facebook/proj.ios/sdk",
+					"$(SYSTEM_APPS_DIR)/cocos2d-x-3.3rc0/plugin/plugins/GameThrive/proj.ios/sdk",
+					"$(SYSTEM_APPS_DIR)/cocos2d-x-3.3rc0/plugin/plugins/facebookads/proj.ios",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -621,7 +652,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/plugin-x_ios-ghesvmhlqejqzueauxtbrhsuzcjp/Build/Products/Debug-iphoneos";
 				OTHER_CFLAGS = "-O2";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = HelloPlugins;
@@ -644,6 +675,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../../plugins/facebookads/proj.ios\"",
 					"$(SRCROOT)/../../../plugins/facebook/proj.ios/sdk",
+					"$(SYSTEM_APPS_DIR)/cocos2d-x-3.3rc0/plugin/plugins/GameThrive/proj.ios/sdk",
+					"$(SYSTEM_APPS_DIR)/cocos2d-x-3.3rc0/plugin/plugins/facebookads/proj.ios",
 				);
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -659,7 +692,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/plugin-x_ios-ghesvmhlqejqzueauxtbrhsuzcjp/Build/Products/Debug-iphoneos";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = HelloPlugins;
 				SDKROOT = iphoneos;

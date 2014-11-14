@@ -32,13 +32,16 @@ namespace cocos2d { namespace plugin {
 	typedef void (*ProtocolPushDidReceiveRemoteNotification) (const char*, const char*, bool);
 	typedef void (*ProtocolPushReceivedTags) (const char*);
 	typedef void (*ProtocolPushReceivedIds) (const char*, const char*);
-
+    
 	class ProtocolPush : public PluginProtocol {
 		public:
 		    ProtocolPush();
 		    virtual ~ProtocolPush();
 
 		    void init(const char* appId, const char* googleProjectNumber, ProtocolPushDidReceiveRemoteNotification cb, bool autoRegister = true);
+        
+            // For iOS only and only if autoRegister was set to false.
+            void registerForPushNotifications();
 
 		    void sendTag(const char* key, const char* value);
 

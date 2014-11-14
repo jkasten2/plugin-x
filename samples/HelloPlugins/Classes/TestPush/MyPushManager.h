@@ -27,6 +27,8 @@ THE SOFTWARE.
 #include "ProtocolPush.h"
 #include "Configs.h"
 
+typedef void (*PushReceived) (const char*);
+
 class MyPushManager {
 public:
 	static MyPushManager* getInstance();
@@ -34,7 +36,7 @@ public:
 
 	void unloadPlugin();
     void loadPlugin();
-    void init();
+    void init(PushReceived cb);
     void sendTag();
 
     static void HandleReceivedNotification(const char* message, const char* additionalData, bool isActive);
@@ -44,6 +46,7 @@ private:
     virtual ~MyPushManager();
     
     cocos2d::plugin::ProtocolPush* _push;
+    static PushReceived _pushReceived;
     static MyPushManager* s_pManager;
 };
 

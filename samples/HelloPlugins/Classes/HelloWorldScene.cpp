@@ -18,12 +18,12 @@ std::string g_testCases[] = {
     "Test Share",
     "Test Facebook User",
     "Test Facebook Share",
+    "Test Push",
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     "Test IAP",
     "Test IAP Online",
     "Test User",
-    "Test Social",
-    "Test Push"
+    "Test Social"
 #endif
 };
 
@@ -107,19 +107,19 @@ void HelloWorld::menuCallback(Ref* pSender)
         newScene = TestFacebookShare::scene();
         break;
     case 5:
-        newScene = TestIAP::scene();
+        newScene = TestPush::scene();
         break;
     case 6:
-        newScene = TestIAPOnline::scene();
+        newScene = TestIAP::scene();
         break;
     case 7:
-        newScene = TestUser::scene();
+        newScene = TestIAPOnline::scene();
         break;
     case 8:
-        newScene = TestSocial::scene();
+        newScene = TestUser::scene();
         break;
     case 9:
-        newScene = TestPush::scene();
+        newScene = TestSocial::scene();
         break;
     default:
         break;

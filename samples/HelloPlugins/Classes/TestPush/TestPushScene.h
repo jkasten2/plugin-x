@@ -25,9 +25,9 @@ THE SOFTWARE.
 #define __TEST_PUSH_SCENE_H__
 
 #include "cocos2d.h"
+#include "MyPushManager.h"
 
-class TestPush : public cocos2d::Layer
-{
+class TestPush : public cocos2d::Layer {
 public:
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();  
@@ -41,6 +41,8 @@ public:
     void testSendTag(Ref* pSender);
     
     void caseChanged(Ref* pSender);
+    
+    static void onPushReceived(const char* message);
 
     // implement the "static node()" method manually
     CREATE_FUNC(TestPush);
@@ -48,6 +50,7 @@ public:
 private:
     cocos2d::MenuItemToggle* _caseItem;
     int _selectedCase;
+    static cocos2d::Label* newMessageLabel;
 };
 
 #endif // __TEST_PUSH_SCENE_H__

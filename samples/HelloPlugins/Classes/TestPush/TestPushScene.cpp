@@ -29,10 +29,8 @@ THE SOFTWARE.
 
 USING_NS_CC;
 
-const std::string s_aTestCases[] = {
-    "QH360",
-    "ND91",
-};
+Label* TestPush::newMessageLabel;
+
 
 Scene* TestPush::scene()
 {
@@ -95,20 +93,31 @@ bool TestPush::init()
     _caseItem = MenuItemToggle::createWithCallback(CC_CALLBACK_1(TestPush::caseChanged, this),
                                                 MenuItemFont::create( "GameThrive" ),
                                                 NULL );
-    int caseLen = sizeof(s_aTestCases) / sizeof(std::string);
+    int caseLen = 2 / sizeof(std::string);
     _caseItem->getSubItems().pushBack( MenuItemFont::create( "GameThrive" ) );
     _caseItem->setPosition(posMid + Point(0, 120));
     pMenu->addChild(_caseItem);
 
     this->addChild(pMenu, 1);
+    
+    
+    TestPush::newMessageLabel = Label::create("", "Arial", 25);
+    TestPush::newMessageLabel->setPosition(posMid + Point(0, -200));
+    this->addChild(TestPush::newMessageLabel, 0);
+    
     return true;
+}
+
+void TestPush::onPushReceived(const char* message) {
+    TestPush::newMessageLabel->setString(message);
 }
 
 void TestPush::caseChanged(Ref* pSender) {
 }
 
 void TestPush::testInit(Ref* pSender) {
-    MyPushManager::getInstance()->init();
+    // NOTE: Init is called from a button for testing here but you should always call init when app first starts so notifications are not missed.
+    MyPushManager::getInstance()->init((PushReceived)onPushReceived);
 }
 
 void TestPush::testSendTag(Ref* pSender) {
