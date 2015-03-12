@@ -18,7 +18,7 @@
  * limitations under the License.
  */
 
-// GameThrive SDK v1.6.3
+// GameThrive SDK
 
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
@@ -29,7 +29,7 @@ typedef void (^GTIdsAvailableBlock)(NSString* playerId, NSString* pushToken);
 typedef void (^GTHandleNotificationBlock)(NSString* message, NSDictionary* additionalData, BOOL isActive);
 
 /**
- `GameThrive` provides a high level interface to interacting with GameThrive's push service.
+ `GameThrive` provides a high level interface to interact with GameThrive's push service.
  
  `GameThrive` exposes a defaultClient for applications which use a globally available client to share configuration settings.
  
@@ -37,12 +37,14 @@ typedef void (^GTHandleNotificationBlock)(NSString* message, NSDictionary* addit
  
  ### Setting up the SDK ###
  
- Follow the documentation from http://docs.gamethrive.com/category/10-ios-game-setup to setup with your game.
+ Follow the documentation from http://documentation.gamethrive.com/v1.0/docs/installing-the-gamethrive-ios-sdk to setup with your game.
  
  */
 @interface GameThrive : NSObject
 
 @property(nonatomic, readonly, copy) NSString* app_id;
+
+extern NSString* const GT_VERSION;
 
 ///--------------------
 /// @name Initialize
@@ -75,6 +77,7 @@ typedef void (^GTHandleNotificationBlock)(NSString* message, NSDictionary* addit
 
 - (void)sendTags:(NSDictionary*)keyValuePair onSuccess:(GTResultSuccessBlock)successBlock onFailure:(GTFailureBlock)failureBlock;
 - (void)sendTags:(NSDictionary*)keyValuePair;
+- (void)sendTagsWithJsonString:(NSString*)jsonString;
 
 - (void)getTags:(GTResultSuccessBlock)successBlock onFailure:(GTFailureBlock)failureBlock;
 - (void)getTags:(GTResultSuccessBlock)successBlock;
@@ -84,6 +87,7 @@ typedef void (^GTHandleNotificationBlock)(NSString* message, NSDictionary* addit
 
 - (void)deleteTags:(NSArray*)keys onSuccess:(GTResultSuccessBlock)successBlock onFailure:(GTFailureBlock)failureBlock;
 - (void)deleteTags:(NSArray*)keys;
+- (void)deleteTagsWithJsonString:(NSString*)jsonString;
 
 - (void)sendPurchase:(NSNumber*)amount onSuccess:(GTResultSuccessBlock)successBlock onFailure:(GTFailureBlock)failureBlock DEPRECATED_ATTRIBUTE;
 - (void)sendPurchase:(NSNumber*)amount DEPRECATED_ATTRIBUTE;
