@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37ACAEF81A153FC400D18B60 /* GameThrivePush.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 37ACAEF71A153FC400D18B60 /* GameThrivePush.h */; };
-		37ACAEFA1A153FC400D18B60 /* GameThrivePush.m in Sources */ = {isa = PBXBuildFile; fileRef = 37ACAEF91A153FC400D18B60 /* GameThrivePush.m */; };
+		377A83A21AD759EF00DE19B1 /* OneSignal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377A83A11AD759EF00DE19B1 /* OneSignal.framework */; };
+		37ACAEF81A153FC400D18B60 /* OneSignalPush.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 37ACAEF71A153FC400D18B60 /* OneSignalPush.h */; };
+		37ACAEFA1A153FC400D18B60 /* OneSignalPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 37ACAEF91A153FC400D18B60 /* OneSignalPush.m */; };
 		37ACAF1A1A15814900D18B60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ACAF191A15814900D18B60 /* UIKit.framework */; };
-		37ACAF201A158DDB00D18B60 /* GameThrive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ACAF1F1A158DDB00D18B60 /* GameThrive.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,18 +20,18 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				37ACAEF81A153FC400D18B60 /* GameThrivePush.h in CopyFiles */,
+				37ACAEF81A153FC400D18B60 /* OneSignalPush.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		37ACAEF41A153FC400D18B60 /* libPluginGameThrivePush.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPluginGameThrivePush.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		37ACAEF71A153FC400D18B60 /* GameThrivePush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameThrivePush.h; sourceTree = "<group>"; };
-		37ACAEF91A153FC400D18B60 /* GameThrivePush.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameThrivePush.m; sourceTree = "<group>"; };
+		377A83A11AD759EF00DE19B1 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = sdk/OneSignal.framework; sourceTree = "<group>"; };
+		37ACAEF41A153FC400D18B60 /* libPluginOneSignalPush.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPluginOneSignalPush.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		37ACAEF71A153FC400D18B60 /* OneSignalPush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalPush.h; sourceTree = "<group>"; };
+		37ACAEF91A153FC400D18B60 /* OneSignalPush.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalPush.m; sourceTree = "<group>"; };
 		37ACAF191A15814900D18B60 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		37ACAF1F1A158DDB00D18B60 /* GameThrive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameThrive.framework; path = sdk/GameThrive.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37ACAF201A158DDB00D18B60 /* GameThrive.framework in Frameworks */,
+				377A83A21AD759EF00DE19B1 /* OneSignal.framework in Frameworks */,
 				37ACAF1A1A15814900D18B60 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,9 +50,9 @@
 		37ACAEEB1A153FC400D18B60 = {
 			isa = PBXGroup;
 			children = (
-				37ACAF1F1A158DDB00D18B60 /* GameThrive.framework */,
+				377A83A11AD759EF00DE19B1 /* OneSignal.framework */,
 				37ACAF191A15814900D18B60 /* UIKit.framework */,
-				37ACAEF61A153FC400D18B60 /* GameThrivePush */,
+				37ACAEF61A153FC400D18B60 /* OneSignalPush */,
 				37ACAEF51A153FC400D18B60 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,26 +60,26 @@
 		37ACAEF51A153FC400D18B60 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				37ACAEF41A153FC400D18B60 /* libPluginGameThrivePush.a */,
+				37ACAEF41A153FC400D18B60 /* libPluginOneSignalPush.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		37ACAEF61A153FC400D18B60 /* GameThrivePush */ = {
+		37ACAEF61A153FC400D18B60 /* OneSignalPush */ = {
 			isa = PBXGroup;
 			children = (
-				37ACAEF71A153FC400D18B60 /* GameThrivePush.h */,
-				37ACAEF91A153FC400D18B60 /* GameThrivePush.m */,
+				37ACAEF71A153FC400D18B60 /* OneSignalPush.h */,
+				37ACAEF91A153FC400D18B60 /* OneSignalPush.m */,
 			);
-			path = GameThrivePush;
-			sourceTree = "<group>";
+			path = OneSignalPush;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		37ACAEF31A153FC400D18B60 /* PluginGameThrivePush */ = {
+		37ACAEF31A153FC400D18B60 /* PluginOneSignalPush */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37ACAF081A153FC400D18B60 /* Build configuration list for PBXNativeTarget "PluginGameThrivePush" */;
+			buildConfigurationList = 37ACAF081A153FC400D18B60 /* Build configuration list for PBXNativeTarget "PluginOneSignalPush" */;
 			buildPhases = (
 				37ACAEF01A153FC400D18B60 /* Sources */,
 				37ACAEF11A153FC400D18B60 /* Frameworks */,
@@ -89,9 +89,9 @@
 			);
 			dependencies = (
 			);
-			name = PluginGameThrivePush;
+			name = PluginOneSignalPush;
 			productName = GameThrivePush;
-			productReference = 37ACAEF41A153FC400D18B60 /* libPluginGameThrivePush.a */;
+			productReference = 37ACAEF41A153FC400D18B60 /* libPluginOneSignalPush.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +108,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 37ACAEEF1A153FC400D18B60 /* Build configuration list for PBXProject "PluginGameThrivePush" */;
+			buildConfigurationList = 37ACAEEF1A153FC400D18B60 /* Build configuration list for PBXProject "PluginOneSignalPush" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -120,7 +120,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				37ACAEF31A153FC400D18B60 /* PluginGameThrivePush */,
+				37ACAEF31A153FC400D18B60 /* PluginOneSignalPush */,
 			);
 		};
 /* End PBXProject section */
@@ -130,7 +130,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37ACAEFA1A153FC400D18B60 /* GameThrivePush.m in Sources */,
+				37ACAEFA1A153FC400D18B60 /* OneSignalPush.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +220,7 @@
 					"$(PROJECT_DIR)/sdk",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PluginOneSignalPush;
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../protocols/platform/ios";
 			};
@@ -235,7 +235,7 @@
 					"$(PROJECT_DIR)/sdk",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PluginOneSignalPush;
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../protocols/platform/ios";
 			};
@@ -244,7 +244,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		37ACAEEF1A153FC400D18B60 /* Build configuration list for PBXProject "PluginGameThrivePush" */ = {
+		37ACAEEF1A153FC400D18B60 /* Build configuration list for PBXProject "PluginOneSignalPush" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37ACAF061A153FC400D18B60 /* Debug */,
@@ -253,7 +253,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		37ACAF081A153FC400D18B60 /* Build configuration list for PBXNativeTarget "PluginGameThrivePush" */ = {
+		37ACAF081A153FC400D18B60 /* Build configuration list for PBXNativeTarget "PluginOneSignalPush" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37ACAF091A153FC400D18B60 /* Debug */,

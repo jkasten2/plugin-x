@@ -91,10 +91,10 @@ bool TestPush::init()
     // create optional menu
     // cases item
     _caseItem = MenuItemToggle::createWithCallback(CC_CALLBACK_1(TestPush::caseChanged, this),
-                                                MenuItemFont::create( "GameThrive" ),
+                                                MenuItemFont::create( "OneSignal" ),
                                                 NULL );
     int caseLen = 2 / sizeof(std::string);
-    _caseItem->getSubItems().pushBack( MenuItemFont::create( "GameThrive" ) );
+    _caseItem->getSubItems().pushBack( MenuItemFont::create( "OneSignal" ) );
     _caseItem->setPosition(posMid + Point(0, 120));
     pMenu->addChild(_caseItem);
 

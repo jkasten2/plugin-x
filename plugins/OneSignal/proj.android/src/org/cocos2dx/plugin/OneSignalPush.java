@@ -1,5 +1,5 @@
 /**
- * Copyright 2014 GameThrive
+ * Copyright 2015 OneSignal
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,23 +22,22 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
-import com.gamethrive.GameThrive;
-import com.gamethrive.GameThrive.GetTagsHandler;
-import com.gamethrive.GameThrive.IdsAvailableHandler;
-import com.gamethrive.NotificationOpenedHandler;
+import com.onesignal.OneSignal;
+import com.onesignal.OneSignal.GetTagsHandler;
+import com.onesignal.OneSignal.IdsAvailableHandler;
+import com.onesignal.OneSignal.NotificationOpenedHandler;
 
-public class GameThrivePush implements InterfacePush, PluginListener {
+public class OneSignalPush implements InterfacePush, PluginListener {
 	private Context mContext;
-	private GameThrive gameThrive;
-	private static GameThrivePush mInstance;
+	private static OneSignalPush mInstance;
 	
-	public GameThrivePush(Context context) {
+	public OneSignalPush(Context context) {
 		mContext = context;
 		mInstance = this;
 	}
 	
 	public void init(String googleProjectNumber, String appId) {
-		gameThrive = new GameThrive((Activity)mContext, googleProjectNumber, appId, new NotificationOpenedHandler() {
+		OneSignal.init((Activity)mContext, googleProjectNumber, appId, new NotificationOpenedHandler() {
 			public void notificationOpened(String message, JSONObject additionalData, boolean isActive) {
 				String curAdditionalData = null;
 				if (additionalData != null)
@@ -51,55 +50,47 @@ public class GameThrivePush implements InterfacePush, PluginListener {
 	}
 	
 	public void sendTag(String key, String value) {
-		if (gameThrive != null)
-			gameThrive.sendTag(key, value);
+		OneSignal.sendTag(key, value);
 	}
 	
 	public void deleteTag(String key) {
-		if (gameThrive != null)
-			gameThrive.deleteTag(key);
+		OneSignal.deleteTag(key);
 	}
 	
 	public void getTags() {
-		if (gameThrive != null) {
-			gameThrive.getTags(new GetTagsHandler() {
-				@Override
-				public void tagsAvailable(JSONObject tags) {
-					try {
-						PushWrapper.onReceivedTags(mInstance, tags.toString());
-					} catch (Throwable t) {
-						t.printStackTrace();
-					}
+		OneSignal.getTags(new GetTagsHandler() {
+			@Override
+			public void tagsAvailable(JSONObject tags) {
+				try {
+					PushWrapper.onReceivedTags(mInstance, tags.toString());
+				} catch (Throwable t) {
+					t.printStackTrace();
 				}
-			});
-		}
+			}
+		});
 	}
 	
 	public void getIds() {
-		if (gameThrive != null) {
-			gameThrive.idsAvailable(new IdsAvailableHandler() {
-				@Override
-				public void idsAvailable(String playerId, String registrationId) {
-					try {
-						PushWrapper.onReceivedIds(mInstance, playerId, registrationId);
-					} catch (Throwable t) {
-						t.printStackTrace();
-					}
+		OneSignal.idsAvailable(new IdsAvailableHandler() {
+			@Override
+			public void idsAvailable(String userId, String registrationId) {
+				try {
+					PushWrapper.onReceivedIds(mInstance, userId, registrationId);
+				} catch (Throwable t) {
+					t.printStackTrace();
 				}
-			});
-		}
+			}
+		});
 	}
 
 	@Override
 	public void onResume() {
-		if (gameThrive != null)
-			gameThrive.onResumed();
+		OneSignal.onResumed();
 	}
 
 	@Override
 	public void onPause() {
-		if (gameThrive != null)
-			gameThrive.onPaused();
+		OneSignal.onPaused();
 	}
 
 	@Override

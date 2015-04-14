@@ -58,7 +58,7 @@ void MyPushManager::purgeManager() {
 }
 
 void MyPushManager::loadPlugin() {
-	_push = (cocos2d::plugin::ProtocolPush*)PluginManager::getInstance()->loadPlugin("GameThrivePush");
+	_push = (cocos2d::plugin::ProtocolPush*)PluginManager::getInstance()->loadPlugin("OneSignalPush");
     CCLog("MyPushManager::loadPlugin:%d", _push == NULL);
 }
 
@@ -71,7 +71,7 @@ void MyPushManager::HandleReceivedNotification(const char* message, const char* 
 
 void MyPushManager::unloadPlugin() {
 	if (_push) {
-		PluginManager::getInstance()->unloadPlugin("GameThrivePush");
+		PluginManager::getInstance()->unloadPlugin("OneSignalPush");
 		_push = NULL;
 	}
 }

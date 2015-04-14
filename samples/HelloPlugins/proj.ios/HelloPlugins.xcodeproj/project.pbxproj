@@ -20,10 +20,10 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		377A83A41AD7611300DE19B1 /* OneSignal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377A83A31AD7611300DE19B1 /* OneSignal.framework */; };
 		37ACAEE91A15393A00D18B60 /* MyPushManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37ACAEE51A15393A00D18B60 /* MyPushManager.cpp */; };
 		37ACAEEA1A15393A00D18B60 /* TestPushScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37ACAEE71A15393A00D18B60 /* TestPushScene.cpp */; };
 		37ACAF1D1A158D3800D18B60 /* libPluginGameThrivePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ACAF1C1A158D3800D18B60 /* libPluginGameThrivePush.a */; };
-		37ACAF221A158DFE00D18B60 /* GameThrive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ACAF211A158DFE00D18B60 /* GameThrive.framework */; };
 		37ACAF241A158ECE00D18B60 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ACAF231A158ECE00D18B60 /* FBAudienceNetwork.framework */; };
 		591A8D2419DF4DB700F71BFD /* libPluginFacebook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 591A8D2219DF4DB700F71BFD /* libPluginFacebook.a */; };
 		591A8D2519DF4DB700F71BFD /* libPluginFacebookAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 591A8D2319DF4DB700F71BFD /* libPluginFacebookAds.a */; };
@@ -123,12 +123,12 @@
 		1D6058910D05DD3D006BFB54 /* HelloPlugins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloPlugins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		377A83A31AD7611300DE19B1 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = ../../../plugins/OneSignal/proj.ios/sdk/OneSignal.framework; sourceTree = "<group>"; };
 		37ACAEE51A15393A00D18B60 /* MyPushManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyPushManager.cpp; sourceTree = "<group>"; };
 		37ACAEE61A15393A00D18B60 /* MyPushManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPushManager.h; sourceTree = "<group>"; };
 		37ACAEE71A15393A00D18B60 /* TestPushScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestPushScene.cpp; sourceTree = "<group>"; };
 		37ACAEE81A15393A00D18B60 /* TestPushScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPushScene.h; sourceTree = "<group>"; };
 		37ACAF1C1A158D3800D18B60 /* libPluginGameThrivePush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPluginGameThrivePush.a; path = "../../../../../../Users/hiptic/Library/Developer/Xcode/DerivedData/plugin-x_ios-ghesvmhlqejqzueauxtbrhsuzcjp/Build/Products/Debug-iphoneos/libPluginGameThrivePush.a"; sourceTree = "<group>"; };
-		37ACAF211A158DFE00D18B60 /* GameThrive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameThrive.framework; path = ../../../plugins/GameThrive/proj.ios/sdk/GameThrive.framework; sourceTree = "<group>"; };
 		37ACAF231A158ECE00D18B60 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = ../../../plugins/facebookads/proj.ios/FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		591A8D2219DF4DB700F71BFD /* libPluginFacebook.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPluginFacebook.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		591A8D2319DF4DB700F71BFD /* libPluginFacebookAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPluginFacebookAds.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,8 +201,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				377A83A41AD7611300DE19B1 /* OneSignal.framework in Frameworks */,
 				37ACAF241A158ECE00D18B60 /* FBAudienceNetwork.framework in Frameworks */,
-				37ACAF221A158DFE00D18B60 /* GameThrive.framework in Frameworks */,
 				591A8D2419DF4DB700F71BFD /* libPluginFacebook.a in Frameworks */,
 				591A8D2519DF4DB700F71BFD /* libPluginFacebookAds.a in Frameworks */,
 				59EB3BE719649CFC0020118E /* libcocos2d iOS.a in Frameworks */,
@@ -323,11 +323,10 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				377A83A31AD7611300DE19B1 /* OneSignal.framework */,
 				A964B98919A1023500D96640 /* libsqlite3.dylib */,
-				37ACAF211A158DFE00D18B60 /* GameThrive.framework */,
 				A964B97D19A101BD00D96640 /* libPluginVungle.a */,
 				15CF33C919C029BF00D5614B /* FacebookSDK.framework */,
-				593E0BDC19BE206C00836D29 /* FBAudienceNetwork.framework */,
 				592A55781964AD7D008E4BC7 /* GameController.framework */,
 				59EB3BEB1964A86D0020118E /* CoreTelephony.framework */,
 				59EB3BE91964A7DD0020118E /* Security.framework */,
@@ -635,6 +634,7 @@
 					"$(SRCROOT)/../../../plugins/facebook/proj.ios/sdk",
 					"$(SYSTEM_APPS_DIR)/cocos2d-x-3.3rc0/plugin/plugins/GameThrive/proj.ios/sdk",
 					"$(SYSTEM_APPS_DIR)/cocos2d-x-3.3rc0/plugin/plugins/facebookads/proj.ios",
+					"/Users/hiptic/Documents/OneSignal-Plugin-x/plugin-x/plugins/OneSignal/proj.ios/sdk",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -677,6 +677,7 @@
 					"$(SRCROOT)/../../../plugins/facebook/proj.ios/sdk",
 					"$(SYSTEM_APPS_DIR)/cocos2d-x-3.3rc0/plugin/plugins/GameThrive/proj.ios/sdk",
 					"$(SYSTEM_APPS_DIR)/cocos2d-x-3.3rc0/plugin/plugins/facebookads/proj.ios",
+					"/Users/hiptic/Documents/OneSignal-Plugin-x/plugin-x/plugins/OneSignal/proj.ios/sdk",
 				);
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;

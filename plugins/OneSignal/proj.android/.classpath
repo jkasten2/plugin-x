@@ -6,6 +6,6 @@
 	<classpathentry kind="src" path="/libPluginProtocol"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry kind="lib" path="sdk/gamethrivesdk.jar"/>
+	<classpathentry kind="lib" path="sdk/OneSignalSDK.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

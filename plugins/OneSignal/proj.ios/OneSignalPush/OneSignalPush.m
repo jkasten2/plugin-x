@@ -1,5 +1,5 @@
 /**
- * Copyright 2014 GameThrive
+ * Copyright 2015 OneSignal
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,12 +19,12 @@
 
 #import "PushWrapper.h"
 
-#import <GameThrive/GameThrive.h>
-#import "GameThrivePush.h"
+#import <OneSignal/OneSignal.h>
+#import "OneSignalPush.h"
 
 
-GameThrivePush* gameThrivePush;
-GameThrive* gameThrive;
+OneSignalPush* oneSignalPush;
+OneSignal* oneSignal;
 
 NSString* launchMessage;
 NSDictionary* launchAdditionalData;
@@ -41,12 +41,12 @@ NSString* dictionaryToJsonString(NSDictionary* dictionaryToConvert) {
 }
 
 void processNotificationOpened() {
-    [PushWrapper onDidReceiveRemoteNotification:gameThrivePush message:launchMessage additionalData:dictionaryToJsonString(launchAdditionalData) isActive:launchIsActive];
+    [PushWrapper onDidReceiveRemoteNotification:oneSignalPush message:launchMessage additionalData:dictionaryToJsonString(launchAdditionalData) isActive:launchIsActive];
 }
 
-void initGameThriveObject(NSDictionary* launchOptions, NSString* appId, BOOL autoRegister) {
-    if (gameThrive == nil) {
-        gameThrive = [[GameThrive alloc] initWithLaunchOptions:launchOptions appId:appId handleNotification:^(NSString* message, NSDictionary* additionalData, BOOL isActive) {
+void initOneSignalObject(NSDictionary* launchOptions, NSString* appId, BOOL autoRegister) {
+    if (oneSignal == nil) {
+        oneSignal = [[OneSignal alloc] initWithLaunchOptions:launchOptions appId:appId handleNotification:^(NSString* message, NSDictionary* additionalData, BOOL isActive) {
             launchMessage = message;
             launchAdditionalData = additionalData;
             launchIsActive = isActive;
@@ -57,7 +57,7 @@ void initGameThriveObject(NSDictionary* launchOptions, NSString* appId, BOOL aut
     }
 }
 
-@implementation UIApplication(GameThriveCocos2dxPush)
+@implementation UIApplication(OneSignalCocos2dxPush)
 
 static void injectSelector(Class newClass, SEL newSel, Class addToClass, SEL makeLikeSel) {
     Method newMeth = class_getInstanceMethod(newClass, newSel);
@@ -76,63 +76,63 @@ static void injectSelector(Class newClass, SEL newSel, Class addToClass, SEL mak
 }
 
 + (void)load {
-    method_exchangeImplementations(class_getInstanceMethod(self, @selector(setDelegate:)), class_getInstanceMethod(self, @selector(setGameThriveCocos2dxDelegate:)));
+    method_exchangeImplementations(class_getInstanceMethod(self, @selector(setDelegate:)), class_getInstanceMethod(self, @selector(setOneSignalCocos2dxDelegate:)));
 }
 
 static Class delegateClass = nil;
 
-- (void) setGameThriveCocos2dxDelegate:(id<UIApplicationDelegate>)delegate {
+- (void) setOneSignalCocos2dxDelegate:(id<UIApplicationDelegate>)delegate {
     if(delegateClass != nil)
         return;
     delegateClass = [delegate class];
     
-    injectSelector(self.class, @selector(gameThriveApplication:didFinishLaunchingWithOptions:),
+    injectSelector(self.class, @selector(oneSignalApplication:didFinishLaunchingWithOptions:),
                    delegateClass, @selector(application:didFinishLaunchingWithOptions:));
-    [self setGameThriveCocos2dxDelegate:delegate];
+    [self setOneSignalCocos2dxDelegate:delegate];
 }
 
-- (BOOL)gameThriveApplication:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
+- (BOOL)oneSignalApplication:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
     if ([launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey] != nil)
-        initGameThriveObject(launchOptions, nil, true);
+        initOneSignalObject(launchOptions, nil, true);
     
-    if ([self respondsToSelector:@selector(gameThriveApplication:didFinishLaunchingWithOptions:)])
-        return [self gameThriveApplication:application didFinishLaunchingWithOptions:launchOptions];
+    if ([self respondsToSelector:@selector(oneSignalApplication:didFinishLaunchingWithOptions:)])
+        return [self oneSignalApplication:application didFinishLaunchingWithOptions:launchOptions];
     return YES;
 }
 
 @end
 
-@implementation GameThrivePush
+@implementation OneSignalPush
 
 - (void) initWithAppId:(NSString*)appId autoRegister:(BOOL)autoRegister {
-    gameThrivePush = self;
+    oneSignalPush = self;
     initCalled = true;
-    initGameThriveObject(nil, appId, autoRegister);
+    initOneSignalObject(nil, appId, autoRegister);
     
     if (launchMessage)
         processNotificationOpened();
 }
 
 - (void) registerForPushNotifications {
-    [gameThrive registerForPushNotifications];
+    [oneSignal registerForPushNotifications];
 }
 
 - (void) sendTag:(NSString*)key value:(NSString*)value {
-    [gameThrive sendTag:key value:value];
+    [oneSignal sendTag:key value:value];
 }
 
 - (void) deleteTag:(NSString*)key {
-    [gameThrive deleteTag:key];
+    [oneSignal deleteTag:key];
 }
 
 - (void) getTags {
-    [gameThrive getTags:^(NSDictionary* result) {
+    [oneSignal getTags:^(NSDictionary* result) {
         [PushWrapper onReceivedTags:self  tags:dictionaryToJsonString(result)];
     }];
 }
 
 - (void) getIds {
-    [gameThrive IdsAvailable:^(NSString* playerId, NSString* pushToken) {
+    [oneSignal IdsAvailable:^(NSString* playerId, NSString* pushToken) {
         [PushWrapper onReceivedIds:self userid:playerId pushToken:pushToken];
     }];
 }

@@ -18,7 +18,7 @@
  * limitations under the License.
  */
 
-// GameThrive SDK
+// GameThrive is deprecated and is now OneSignal. Please update to use the OneSignal class as GameThrive will be removed in future versions.
 
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
@@ -40,6 +40,8 @@ typedef void (^GTHandleNotificationBlock)(NSString* message, NSDictionary* addit
  Follow the documentation from http://documentation.gamethrive.com/v1.0/docs/installing-the-gamethrive-ios-sdk to setup with your game.
  
  */
+
+__attribute__((deprecated))
 @interface GameThrive : NSObject
 
 @property(nonatomic, readonly, copy) NSString* app_id;
@@ -55,39 +57,39 @@ extern NSString* const GT_VERSION;
  
  */
 
-- (id)initWithLaunchOptions:(NSDictionary*)launchOptions;
+- (id)initWithLaunchOptions:(NSDictionary*)launchOptions DEPRECATED_ATTRIBUTE;
 
-- (id)initWithLaunchOptions:(NSDictionary*)launchOptions autoRegister:(BOOL)autoRegister;
+- (id)initWithLaunchOptions:(NSDictionary*)launchOptions autoRegister:(BOOL)autoRegister DEPRECATED_ATTRIBUTE;
 
-- (id)initWithLaunchOptions:(NSDictionary*)launchOptions handleNotification:(GTHandleNotificationBlock)callback;
+- (id)initWithLaunchOptions:(NSDictionary*)launchOptions handleNotification:(GTHandleNotificationBlock)callback DEPRECATED_ATTRIBUTE;
 
-- (id)initWithLaunchOptions:(NSDictionary*)launchOptions appId:(NSString*)appId handleNotification:(GTHandleNotificationBlock)callback;
+- (id)initWithLaunchOptions:(NSDictionary*)launchOptions appId:(NSString*)appId handleNotification:(GTHandleNotificationBlock)callback DEPRECATED_ATTRIBUTE;
 
-- (id)initWithLaunchOptions:(NSDictionary*)launchOptions appId:(NSString*)appId handleNotification:(GTHandleNotificationBlock)callback autoRegister:(BOOL)autoRegister;
+- (id)initWithLaunchOptions:(NSDictionary*)launchOptions appId:(NSString*)appId handleNotification:(GTHandleNotificationBlock)callback autoRegister:(BOOL)autoRegister DEPRECATED_ATTRIBUTE;
 
 // Only use if you passed FALSE to autoRegister
-- (void)registerForPushNotifications;
+- (void)registerForPushNotifications DEPRECATED_ATTRIBUTE;
 
 
-+ (void)setDefaultClient:(GameThrive*)client;
-+ (GameThrive*)defaultClient;
++ (void)setDefaultClient:(GameThrive*)client DEPRECATED_ATTRIBUTE;
++ (GameThrive*)defaultClient DEPRECATED_ATTRIBUTE;
 
-- (void)sendTag:(NSString*)key value:(NSString*)value onSuccess:(GTResultSuccessBlock)successBlock onFailure:(GTFailureBlock)failureBlock;
-- (void)sendTag:(NSString*)key value:(NSString*)value;
+- (void)sendTag:(NSString*)key value:(NSString*)value onSuccess:(GTResultSuccessBlock)successBlock onFailure:(GTFailureBlock)failureBlock DEPRECATED_ATTRIBUTE;
+- (void)sendTag:(NSString*)key value:(NSString*)value DEPRECATED_ATTRIBUTE;
 
-- (void)sendTags:(NSDictionary*)keyValuePair onSuccess:(GTResultSuccessBlock)successBlock onFailure:(GTFailureBlock)failureBlock;
-- (void)sendTags:(NSDictionary*)keyValuePair;
-- (void)sendTagsWithJsonString:(NSString*)jsonString;
+- (void)sendTags:(NSDictionary*)keyValuePair onSuccess:(GTResultSuccessBlock)successBlock onFailure:(GTFailureBlock)failureBlock DEPRECATED_ATTRIBUTE;
+- (void)sendTags:(NSDictionary*)keyValuePair DEPRECATED_ATTRIBUTE;
+- (void)sendTagsWithJsonString:(NSString*)jsonString DEPRECATED_ATTRIBUTE;
 
-- (void)getTags:(GTResultSuccessBlock)successBlock onFailure:(GTFailureBlock)failureBlock;
-- (void)getTags:(GTResultSuccessBlock)successBlock;
+- (void)getTags:(GTResultSuccessBlock)successBlock onFailure:(GTFailureBlock)failureBlock DEPRECATED_ATTRIBUTE;
+- (void)getTags:(GTResultSuccessBlock)successBlock DEPRECATED_ATTRIBUTE;
 
-- (void)deleteTag:(NSString*)key onSuccess:(GTResultSuccessBlock)successBlock onFailure:(GTFailureBlock)failureBlock;
-- (void)deleteTag:(NSString*)key;
+- (void)deleteTag:(NSString*)key onSuccess:(GTResultSuccessBlock)successBlock onFailure:(GTFailureBlock)failureBlock DEPRECATED_ATTRIBUTE;
+- (void)deleteTag:(NSString*)key DEPRECATED_ATTRIBUTE;
 
-- (void)deleteTags:(NSArray*)keys onSuccess:(GTResultSuccessBlock)successBlock onFailure:(GTFailureBlock)failureBlock;
-- (void)deleteTags:(NSArray*)keys;
-- (void)deleteTagsWithJsonString:(NSString*)jsonString;
+- (void)deleteTags:(NSArray*)keys onSuccess:(GTResultSuccessBlock)successBlock onFailure:(GTFailureBlock)failureBlock DEPRECATED_ATTRIBUTE;
+- (void)deleteTags:(NSArray*)keys DEPRECATED_ATTRIBUTE;
+- (void)deleteTagsWithJsonString:(NSString*)jsonString DEPRECATED_ATTRIBUTE;
 
 - (void)sendPurchase:(NSNumber*)amount onSuccess:(GTResultSuccessBlock)successBlock onFailure:(GTFailureBlock)failureBlock DEPRECATED_ATTRIBUTE;
 - (void)sendPurchase:(NSNumber*)amount DEPRECATED_ATTRIBUTE;
