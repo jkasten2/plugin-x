@@ -37,6 +37,7 @@ public class OneSignalPush implements InterfacePush, PluginListener {
 	}
 	
 	public void init(String googleProjectNumber, String appId) {
+		OneSignal.sdkType = "cocos2dx";
 		OneSignal.init((Activity)mContext, googleProjectNumber, appId, new NotificationOpenedHandler() {
 			public void notificationOpened(String message, JSONObject additionalData, boolean isActive) {
 				String curAdditionalData = null;

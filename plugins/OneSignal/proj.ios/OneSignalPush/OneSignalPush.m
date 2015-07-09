@@ -46,6 +46,7 @@ void processNotificationOpened() {
 
 void initOneSignalObject(NSDictionary* launchOptions, NSString* appId, BOOL autoRegister) {
     if (oneSignal == nil) {
+        [OneSignal setValue:@"coscos2dx" forKey:@"mSDKType"];
         oneSignal = [[OneSignal alloc] initWithLaunchOptions:launchOptions appId:appId handleNotification:^(NSString* message, NSDictionary* additionalData, BOOL isActive) {
             launchMessage = message;
             launchAdditionalData = additionalData;
