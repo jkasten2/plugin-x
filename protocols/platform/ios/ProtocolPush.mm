@@ -82,7 +82,7 @@ namespace cocos2d { namespace plugin {
         id ocObj = pData->obj;
         if ([ocObj conformsToProtocol:@protocol(InterfacePush)]) {
             NSObject<InterfacePush>* curObj = ocObj;
-            [curObj getTags];
+            [curObj getIds];
         }
     }
     
