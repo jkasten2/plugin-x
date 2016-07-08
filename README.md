@@ -1,4 +1,4 @@
-##### Plugin-x is now depercated.
+##### Plugin-x is now deprecated.
 
 Please use OneSignal from Cocos2d-x SDKBOX.
 
